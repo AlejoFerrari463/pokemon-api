@@ -36,27 +36,41 @@ fetch(api)
                 const card = document.createElement("div")
                 card.classList.add("card")
 
-                const imagen = document.createElement("div")
-                imagen.innerHTML=`
+                const contenedorImagenes = document.createElement("div")
+                contenedorImagenes.classList.add("contenedor-imagenes")
+
+                const imagen_adelante = document.createElement("div")
+                imagen_adelante.innerHTML=`
                 
                     <img src="${imagen_frente}" class="card-img-top" alt="${name}">
                 
                 `
 
+                const imagen_atras = document.createElement("div")
+                imagen_atras.innerHTML=`
+                
+                    <img src="${imagen_trasera}" class="card-img-top" alt="${name}">
+                
+                `
+
+
                 const body = document.createElement("div")
                 body.classList.add("card-body")
                 body.innerHTML=`
                 
-                    <h5 class="card-title">${name}</h5> 
+                    <h5 class="card-title">${name.toUpperCase()}</h5> 
 
                 `
 
+                
+                const tituloHabilidad = document.createElement("div")
+                tituloHabilidad.classList.add("titulo-habilidades")
+                tituloHabilidad.innerText="HABILIDADES"
+                body.appendChild(tituloHabilidad)
+
                 const contenedorHabilidad = document.createElement("div")
                 contenedorHabilidad.classList.add("contenedor-habilidades")
-
-                console.log(name)
-                console.log(imagen_frente)
-                console.log(imagen_trasera)
+                
 
                 info_final.abilities.forEach((habilidad)=>{
                     
@@ -68,15 +82,18 @@ fetch(api)
                         ${habilidad.ability.name}
                     
                     `
-
-                    contenedorHabilidad.appendChild(nombreHabilidad)
                     
+
+                    
+                    contenedorHabilidad.appendChild(nombreHabilidad)
                     body.appendChild(contenedorHabilidad)
-                   
 
-                    card.appendChild(imagen)
+                    contenedorImagenes.appendChild(imagen_adelante)
+                    contenedorImagenes.appendChild(imagen_atras)
+                    
+                    card.appendChild(contenedorImagenes)
                     card.appendChild(body)
-
+                   
                     col.appendChild(card)
 
                     main.appendChild(col)
