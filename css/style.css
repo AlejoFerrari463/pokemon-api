@@ -1,0 +1,17 @@
+.card-img-top {
+
+    height: 200px;
+    object-fit: contain;
+
+}
+
+.contenedor-habilidades {
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    
+    flex-wrap: wrap;
+}
