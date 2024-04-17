@@ -1,17 +1,17 @@
 
 const contenedorButtons = document.querySelector(".contenedor-botones")
 
-const buttonPrev = document.createElement("div")
-buttonPrev.classList.add("button-pages")
-buttonPrev.id="prev"
-buttonPrev.innerText="PREV"
+const buttonBack = document.createElement("div")
+buttonBack.classList.add("button-pages")
+buttonBack.id="back"
+buttonBack.innerText="BACK"
 
 const buttonNext = document.createElement("div")
 buttonNext.classList.add("button-pages")
 buttonNext.innerText="NEXT"
 buttonNext.id="next"
 
-contenedorButtons.appendChild(buttonPrev)
+contenedorButtons.appendChild(buttonBack)
 contenedorButtons.appendChild(buttonNext)
 
 let inicio = 0
@@ -21,15 +21,15 @@ let inicio = 0
 function cargarPagina(inicio){
 
     console.log((inicio+60)/60)
-    const prev = document.querySelector("#prev")
+    const back = document.querySelector("#back")
     const next = document.querySelector("#next")
 
     if (inicio==0){
         
-        prev.style.display="none"
+        back.style.display="none"
     }
     else {
-        prev.style.display="flex"
+        back.style.display="flex"
     }
     
     if((inicio/60)==21){
@@ -48,6 +48,26 @@ function cargarPagina(inicio){
 
     const main = document.querySelector("#main")
     main.innerHTML=``
+
+    const moverPages = document.querySelector(".contador-pages")
+
+        if (((inicio/60)+1)>=10){
+
+            moverPages.style.right="24px"
+            moverPages.style.top="67px"
+            
+        }
+        else {
+            moverPages.style.top="66px"
+            moverPages.style.right="30px"
+
+        }
+    
+
+    const pokebola = document.querySelector(".contador-pages")
+    pokebola.innerText=`${(inicio/60)+1}`
+
+   
 
 fetch(api)
     .then((response)=>{
@@ -172,7 +192,7 @@ fetch(api)
 cargarPagina(inicio);
    
 
-const agarrarButtonPrev = document.querySelector("#prev")
+const agarrarButtonPrev = document.querySelector("#back")
 const agarrarButtonNext = document.querySelector("#next")
 
 agarrarButtonPrev.addEventListener("click",()=>{

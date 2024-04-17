@@ -1,3 +1,50 @@
+/* HEADER - INICIO */
+
+.navbar-collapse {
+
+    
+    justify-content: center;
+    margin-right: 60px;
+
+}
+
+.images-pages {
+
+    position: fixed;
+    top: 60px;
+    right: 15px;
+
+    z-index: 2;
+    
+
+}
+
+.pokebola {
+
+    width: 50px;
+    object-fit: contain;
+    filter:brightness(55%) drop-shadow(0px 0px 5px black);
+    
+
+}
+
+.contador-pages {
+
+    position: fixed;
+   
+
+    z-index: 3;
+
+    color: #fff;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+
 /* CARDS - INICIO */
 .card {
 
