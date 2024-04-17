@@ -1,3 +1,4 @@
+/* CARDS - INICIO */
 .card {
 
 
@@ -54,3 +55,49 @@
 
     color: black;
 }
+
+/* CARDS - FIN */
+
+
+/* BOTONES NEXT/PREV - INICIO */
+
+
+.contenedor-botones {
+
+    position: fixed;
+
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button-pages {
+
+    height: 40px;
+    width: 80px;
+    background-color: brown;
+
+    cursor: pointer;
+
+    margin: 0 30px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+}
+
+
+
+
+

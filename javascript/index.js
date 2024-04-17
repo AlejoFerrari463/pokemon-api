@@ -1,4 +1,17 @@
 
+const contenedorButtons = document.querySelector(".contenedor-botones")
+
+const buttonPrev = document.createElement("div")
+buttonPrev.classList.add("button-pages")
+buttonPrev.innerText="PREV"
+
+const buttonNext = document.createElement("div")
+buttonNext.classList.add("button-pages")
+buttonPrev.innerText="NEXT"
+
+contenedorButtons.appendChild(buttonPrev)
+contenedorButtons.appendChild(buttonNext)
+
 let inicio = 0
 
 const api = `https://pokeapi.co/api/v2/pokemon?limit=32&offset=${inicio}`
