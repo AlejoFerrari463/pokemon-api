@@ -3,18 +3,51 @@ const contenedorButtons = document.querySelector(".contenedor-botones")
 
 const buttonPrev = document.createElement("div")
 buttonPrev.classList.add("button-pages")
+buttonPrev.id="prev"
 buttonPrev.innerText="PREV"
 
 const buttonNext = document.createElement("div")
 buttonNext.classList.add("button-pages")
-buttonPrev.innerText="NEXT"
+buttonNext.innerText="NEXT"
+buttonNext.id="next"
 
 contenedorButtons.appendChild(buttonPrev)
 contenedorButtons.appendChild(buttonNext)
 
 let inicio = 0
 
-const api = `https://pokeapi.co/api/v2/pokemon?limit=32&offset=${inicio}`
+
+
+function cargarPagina(inicio){
+
+    console.log((inicio+60)/60)
+    const prev = document.querySelector("#prev")
+    const next = document.querySelector("#next")
+
+    if (inicio==0){
+        
+        prev.style.display="none"
+    }
+    else {
+        prev.style.display="flex"
+    }
+    
+    if((inicio/60)==21){
+    
+        next.style.display="none"
+    
+    }
+    else {
+    
+        next.style.display="flex"
+    
+    }
+
+    const api = `https://pokeapi.co/api/v2/pokemon?limit=60&offset=${inicio}`
+
+
+    const main = document.querySelector("#main")
+    main.innerHTML=``
 
 fetch(api)
     .then((response)=>{
@@ -47,7 +80,7 @@ fetch(api)
                 col.classList.add("col")
 
                 const card = document.createElement("div")
-                card.classList.add("card")
+                card.classList.add("card","h-100")
 
                 const contenedorImagenes = document.createElement("div")
                 contenedorImagenes.classList.add("contenedor-imagenes")
@@ -71,7 +104,7 @@ fetch(api)
                 body.classList.add("card-body")
                 body.innerHTML=`
                 
-                    <h5 class="card-title">${name.toUpperCase()}</h5> 
+                    <p class="card-title">${name}</p> 
 
                 `
 
@@ -113,12 +146,12 @@ fetch(api)
 
 
                 })
-                console.log(" ")
+                
 
             })
             .catch((error2)=>{
 
-                
+
 
                 console.log(error2)
             })
@@ -132,4 +165,27 @@ fetch(api)
     .catch((error)=>{
         console.log(error)
     })
+
+
+}
+
+cargarPagina(inicio);
    
+
+const agarrarButtonPrev = document.querySelector("#prev")
+const agarrarButtonNext = document.querySelector("#next")
+
+agarrarButtonPrev.addEventListener("click",()=>{
+
+    inicio-=60
+    cargarPagina(inicio)
+
+})
+
+agarrarButtonNext.addEventListener("click",()=>{
+
+    inicio+=60
+    cargarPagina(inicio)
+  
+
+})

@@ -26,6 +26,13 @@
 
 }
 
+.card-title {
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
 .card-body {
 
     text-align: center;
@@ -66,7 +73,7 @@
 
     position: fixed;
 
-    bottom: 20px;
+    bottom: 35px;
     left: 0px;
     right: 0px;
 
@@ -94,6 +101,9 @@
     align-items: center;
 
     color: white;
+
+    border: none;
+    border-radius: 3px;
 
 }
 
