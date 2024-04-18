@@ -2,20 +2,28 @@
 
 .navbar-collapse {
 
-    
+    display: flex;
     justify-content: center;
-    margin-right: 60px;
+    margin-right: 110px;
+   
+
+}
+
+.navbar-toggler:focus {
+
+    box-shadow: 0px 0px 10px black,-0px -0px 10px black;
 
 }
 
 .images-pages {
 
     position: fixed;
-    top: 60px;
-    right: 15px;
+    top: 75px;
+    right: 10px;
 
     z-index: 2;
-    
+
+ 
 
 }
 
@@ -25,13 +33,13 @@
     object-fit: contain;
     filter:brightness(55%) drop-shadow(0px 0px 5px black);
     
+    
 
 }
 
 .contador-pages {
 
     position: fixed;
-   
 
     z-index: 3;
 
@@ -41,6 +49,7 @@
     font-weight: bold;
 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+
     
 
 }

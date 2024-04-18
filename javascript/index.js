@@ -1,3 +1,7 @@
+let inicio = 0
+
+
+
 
 const contenedorButtons = document.querySelector(".contenedor-botones")
 
@@ -14,13 +18,14 @@ buttonNext.id="next"
 contenedorButtons.appendChild(buttonBack)
 contenedorButtons.appendChild(buttonNext)
 
-let inicio = 0
+
+const moverPages = document.querySelector(".contador-pages")
 
 
 
 function cargarPagina(inicio){
 
-    console.log((inicio+60)/60)
+    
     const back = document.querySelector("#back")
     const next = document.querySelector("#next")
 
@@ -45,21 +50,28 @@ function cargarPagina(inicio){
 
     const api = `https://pokeapi.co/api/v2/pokemon?limit=60&offset=${inicio}`
 
+    const moverPages = document.querySelector(".contador-pages")
 
     const main = document.querySelector("#main")
     main.innerHTML=``
 
-    const moverPages = document.querySelector(".contador-pages")
+
+
+   
+    
+
+  
 
         if (((inicio/60)+1)>=10){
 
-            moverPages.style.right="24px"
-            moverPages.style.top="67px"
+            moverPages.style.top="82px"
+            moverPages.style.right="19px"
+           
             
         }
         else {
-            moverPages.style.top="66px"
-            moverPages.style.right="30px"
+            moverPages.style.top="81px"
+            moverPages.style.right="25px"
 
         }
     
@@ -198,6 +210,7 @@ const agarrarButtonNext = document.querySelector("#next")
 agarrarButtonPrev.addEventListener("click",()=>{
 
     inicio-=60
+    console.log(inicio)
     cargarPagina(inicio)
 
 })
@@ -207,5 +220,22 @@ agarrarButtonNext.addEventListener("click",()=>{
     inicio+=60
     cargarPagina(inicio)
   
+
+})
+
+
+const buscadorNumero = document.querySelector("input")
+buscadorNumero.addEventListener("keydown",(event)=>{
+
+    if (event.key == "Enter" && event.target.value>0 && event.target.value<23){
+        inicio = ((event.target.value*60)-60)
+        cargarPagina(inicio)
+    }
+
+    else {
+        console.log("no")
+    }
+
+
 
 })
