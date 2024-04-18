@@ -105,7 +105,7 @@ fetch(api)
 
                 const {name,sprites} = info_final
 
-                const {front_default: imagen_frente, back_default: imagen_trasera} = sprites
+                const {front_default: imagen_frente} = sprites
 
 
                 const col = document.createElement("div")
@@ -124,12 +124,6 @@ fetch(api)
                 
                 `
 
-                const imagen_atras = document.createElement("div")
-                imagen_atras.innerHTML=`
-                
-                    <img src="${imagen_trasera}" class="card-img-top" alt="${name}">
-                
-                `
 
 
                 const body = document.createElement("div")
@@ -167,7 +161,7 @@ fetch(api)
                     body.appendChild(contenedorHabilidad)
 
                     contenedorImagenes.appendChild(imagen_adelante)
-                    contenedorImagenes.appendChild(imagen_atras)
+                    
                     
                     card.appendChild(contenedorImagenes)
                     card.appendChild(body)
@@ -186,6 +180,8 @@ fetch(api)
 
 
                 console.log(error2)
+
+
             })
 
 
@@ -227,15 +223,34 @@ agarrarButtonNext.addEventListener("click",()=>{
 const buscadorNumero = document.querySelector("input")
 buscadorNumero.addEventListener("keydown",(event)=>{
 
+    
     if (event.key == "Enter" && event.target.value>0 && event.target.value<23){
-        inicio = ((event.target.value*60)-60)
+        inicio = (((parseInt(event.target.value))*60)-60)
         cargarPagina(inicio)
     }
 
-    else {
-        console.log("no")
-    }
+    if (event.key == "Enter"){
+
+    let buscarPokemon = `https://pokeapi.co/api/v2/pokemon/${event.target.value}`
+    console.log(buscarPokemon)
+
+    fetch(buscarPokemon)
+    .then((response)=>{
+        return response.json()
+    })
+    .then((info)=>{
+
+        const { name } = info
+
+        console.log(name)
 
 
+
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+
+}
 
 })
