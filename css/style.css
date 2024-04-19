@@ -1,24 +1,21 @@
 /* HEADER - INICIO */
 
-.navbar-collapse {
+.navbar{
 
+    background-color: red;
     display: flex;
-    justify-content: center;
-    margin-right: 110px;
-   
-
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 100px;
+    
 }
 
-.navbar-toggler:focus {
 
-    box-shadow: 0px 0px 10px black,-0px -0px 10px black;
-
-}
 
 .images-pages {
 
     position: fixed;
-    top: 75px;
+    top: 85px;
     right: 10px;
 
     z-index: 2;
@@ -80,6 +77,8 @@
  
     object-fit: contain;
 
+
+    
 }
 
 .card-title {
@@ -163,7 +162,14 @@
 
 }
 
+/* BOTONES NEXT/PREV - FIN */
 
+/* MODAL - INICIO */
 
+.modal-header {
+
+    justify-content: center;
+
+}
 
 

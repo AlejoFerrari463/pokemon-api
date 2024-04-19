@@ -64,13 +64,13 @@ function cargarPagina(inicio){
 
         if (((inicio/60)+1)>=10){
 
-            moverPages.style.top="82px"
+            moverPages.style.top="92px"
             moverPages.style.right="19px"
            
             
         }
         else {
-            moverPages.style.top="81px"
+            moverPages.style.top="91px"
             moverPages.style.right="25px"
 
         }
@@ -118,13 +118,19 @@ fetch(api)
                 contenedorImagenes.classList.add("contenedor-imagenes")
 
                 const imagen_adelante = document.createElement("div")
+
                 imagen_adelante.innerHTML=`
                 
                     <img src="${imagen_frente}" class="card-img-top" alt="${name}">
                 
                 `
 
+                imagen_adelante.setAttribute("data-bs-toggle","modal")
+                imagen_adelante.setAttribute("data-bs-target","#exampleModal")
 
+               
+
+               
 
                 const body = document.createElement("div")
                 body.classList.add("card-body")
@@ -142,6 +148,8 @@ fetch(api)
 
                 const contenedorHabilidad = document.createElement("div")
                 contenedorHabilidad.classList.add("contenedor-habilidades")
+
+                
                 
 
                 info_final.abilities.forEach((habilidad)=>{
@@ -154,7 +162,7 @@ fetch(api)
                         ${habilidad.ability.name}
                     
                     `
-                    
+                 
 
                     
                     contenedorHabilidad.appendChild(nombreHabilidad)
@@ -162,13 +170,26 @@ fetch(api)
 
                     contenedorImagenes.appendChild(imagen_adelante)
                     
-                    
+                 
                     card.appendChild(contenedorImagenes)
                     card.appendChild(body)
+                    
                    
                     col.appendChild(card)
 
                     main.appendChild(col)
+
+                    imagen_adelante.addEventListener("click",()=>{
+                        const tituloModal = document.querySelector(".modal-title")
+                        tituloModal.innerText=`${name}`
+    
+                        const imagenModal = document.querySelector(".modal-body")
+                        imagenModal.innerHTML=`
+                            <img src="${imagen_frente}" class="card-img-top" alt="${name}">
+        
+                        `
+                    })
+                   
 
 
                 })
