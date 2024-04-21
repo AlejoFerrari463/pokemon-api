@@ -43,8 +43,8 @@ agarrarButtonNext.addEventListener("click",()=>{
 })
 
 
-let pokemonBuscado = [{nombre: "hola"},{altura: "nose"}]
-pokemonBuscado.push({habilidad:"hey"})
+
+
 
 // let pokemonBuscado = {
 //     nombre: "",
@@ -95,18 +95,41 @@ buscadorNumero.addEventListener("keydown",(event)=>{
     })
     .then((info)=>{
 
+        let pokemonDatosGenerales = []
+        let pokemonHabilidades = []
+
         console.log(info)
 
-        const { name } = info
+        const { name, sprites: imagenes, height, weight, id, moves} = info
 
-        console.log(typeof(name))
+        const movimientos = moves.length
 
-  
+        const { front_default: imagen_frente } = imagenes
 
-        localStorage.setItem("nombre",JSON.stringify(pokemonBuscado));
+        pokemonDatosGenerales.push({nombre: name, imagen: imagen_frente,altura: height,peso: weight, id, movimientos})
 
+        console.log(pokemonDatosGenerales)
 
-        // window.location.href = "/html/nombre.html"
+        info.abilities.forEach((element) => {
+            
+        
+            const { ability } = element
+            const { name: nombre_habilidad } = ability
+
+          
+            pokemonHabilidades.push(nombre_habilidad)
+
+       
+        });
+
+        
+
+        localStorage.setItem("datos",JSON.stringify(pokemonDatosGenerales));
+       
+        localStorage.setItem("habilidades",JSON.stringify(pokemonHabilidades));
+       
+
+        window.location.href = "/html/nombre.html"
 
     })
     .catch((error)=>{
