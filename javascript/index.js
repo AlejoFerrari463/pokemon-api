@@ -43,6 +43,16 @@ agarrarButtonNext.addEventListener("click",()=>{
 })
 
 
+let pokemonBuscado = [{nombre: "hola"},{altura: "nose"}]
+pokemonBuscado.push({habilidad:"hey"})
+
+// let pokemonBuscado = {
+//     nombre: "",
+//     altura: "",
+//     imagen: "",
+//     peso: "",
+// }
+
 
 const buscadorNumero = document.querySelector("input")
 buscadorNumero.addEventListener("keydown",(event)=>{
@@ -85,15 +95,18 @@ buscadorNumero.addEventListener("keydown",(event)=>{
     })
     .then((info)=>{
 
-        
+        console.log(info)
+
         const { name } = info
 
         console.log(typeof(name))
 
-        localStorage.setItem("nombre",name);
+  
+
+        localStorage.setItem("nombre",JSON.stringify(pokemonBuscado));
 
 
-        window.location.href = "/html/nombre.html"
+        // window.location.href = "/html/nombre.html"
 
     })
     .catch((error)=>{
