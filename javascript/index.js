@@ -85,16 +85,20 @@ buscadorNumero.addEventListener("keydown",(event)=>{
     })
     .then((info)=>{
 
+        
         const { name } = info
 
-        console.log(name)
+        console.log(typeof(name))
+
+        localStorage.setItem("nombre",name);
 
 
+        window.location.href = "/html/nombre.html"
 
     })
     .catch((error)=>{
         
-       
+       console.log(error)
 
         if ((Number.isInteger(parseInt(event.target.value))==false)){
 
