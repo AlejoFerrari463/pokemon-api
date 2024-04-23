@@ -1,0 +1,68 @@
+/* CARDS - INICIO */
+.card {
+
+
+    border: 3px solid green;
+    background-color: yellow;
+
+
+}
+
+.contenedor-imagenes {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+  
+
+}
+
+.card-img-top {
+
+    height: 250px;
+ 
+    object-fit: contain;
+
+
+    
+}
+
+.card-title {
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.card-body {
+
+    text-align: center;
+
+}
+
+.titulo-habilidades {
+
+    margin-top: 30px;
+
+    color: blue;
+
+}
+
+.contenedor-habilidades {
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+
+    flex-wrap: wrap;
+
+    margin-top: -20px;
+
+    color: black;
+}
+
+/* CARDS - FIN */

@@ -1,175 +1,107 @@
 /* HEADER - INICIO */
-
-.navbar{
-
-    background-color: red;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 100px;
-    
+.navbar {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
 }
 
-
-
 .images-pages {
-
-    position: fixed;
-    top: 85px;
-    right: 10px;
-
-    z-index: 2;
-
- 
-
+  position: fixed;
+  top: 85px;
+  right: 10px;
+  z-index: 2;
 }
 
 .pokebola {
-
-    width: 50px;
-    object-fit: contain;
-    filter:brightness(55%) drop-shadow(0px 0px 5px black);
-    
-    
-
+  width: 50px;
+  object-fit: contain;
+  filter: brightness(55%) drop-shadow(0px 0px 5px black);
 }
 
 .contador-pages {
-
-    position: fixed;
-
-    z-index: 3;
-
-    color: #fff;
-
-    font-size: 22px;
-    font-weight: bold;
-
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-
-    
-
+  position: fixed;
+  z-index: 3;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* HEADER - FIN */
 /* CARDS - INICIO */
 .card {
-
-
-    border: 3px solid green;
-    background-color: yellow;
-
-
+  border: 3px solid green;
+  background-color: yellow;
 }
 
 .contenedor-imagenes {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-  
-
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .card-img-top {
-
-    height: 250px;
- 
-    object-fit: contain;
-
-
-    
+  height: 250px;
+  object-fit: contain;
 }
 
 .card-title {
-
-    font-size: 20px;
-    font-weight: bold;
-
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-body {
-
-    text-align: center;
-
+  text-align: center;
 }
 
 .titulo-habilidades {
-
-    margin-top: 30px;
-
-    color: blue;
-
+  margin-top: 30px;
+  color: blue;
 }
 
 .contenedor-habilidades {
-
-    display: flex;
-
-    justify-content: space-around;
-    align-items: center;
-
-    text-align: center;
-
-    flex-wrap: wrap;
-
-    margin-top: -20px;
-
-    color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  color: black;
 }
 
 /* CARDS - FIN */
-
-
 /* BOTONES NEXT/PREV - INICIO */
-
-
 .contenedor-botones {
-
-    position: fixed;
-
-    bottom: 35px;
-    left: 0px;
-    right: 0px;
-
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
+  position: fixed;
+  bottom: 35px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-pages {
-
-    height: 40px;
-    width: 80px;
-    background-color: brown;
-
-    cursor: pointer;
-
-    margin: 0 30px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-
-    border: none;
-    border-radius: 3px;
-
+  height: 40px;
+  width: 80px;
+  background-color: brown;
+  cursor: pointer;
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 3px;
 }
 
 /* BOTONES NEXT/PREV - FIN */
-
 /* MODAL - INICIO */
-
 .modal-header {
-
-    justify-content: center;
-
+  justify-content: center;
 }
 
+/* MODAl - FIN */
 
+/*# sourceMappingURL=style.css.map */
