@@ -59,29 +59,25 @@ buscadorNumero.addEventListener("keydown",(event)=>{
 
    
     
-    if (event.key == "Enter" && (parseInt(event.target.value))>0 && (parseInt(event.target.value))<23){
-        inicio = (((parseInt(event.target.value))*60)-60)
-      
-        cargar.cargarPagina(inicio);
+    if (event.key == "Enter" && ((parseInt(event.target.value))<0 || (parseInt(event.target.value))>1025)){
 
-    }
-    if (event.key == "Enter" && ((parseInt(event.target.value))<=0 || (parseInt(event.target.value))>=23)){
-       
-      
         Toastify({
-            text: "Numero de pagina no disponible",
+            text: "ID no valido",
             duration: 2000,
             gravity: "top", // `top` or `bottom`
             position: "left", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
             style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
-              color: "black"
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            color: "black"
             },
             onClick: function(){} // Callback after click
-          }).showToast();
-          
-    } 
+            }).showToast();
+       
+    }
+  
+       
+
   
 
     if (event.key == "Enter"){
