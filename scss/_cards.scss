@@ -2,8 +2,9 @@
 .card {
 
 
-    border: 3px solid green;
-    background-color: yellow;
+    border: none;
+    background-color: $color-principal;
+    box-shadow: 2px 2px 5px #FB993E, -2px -2px 5px #FB993E;
 
 
 }

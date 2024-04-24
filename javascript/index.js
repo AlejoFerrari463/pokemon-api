@@ -4,11 +4,24 @@ const contenedorButtons = document.querySelector(".contenedor-botones")
 
 const buttonBack = document.createElement("div")
 buttonBack.classList.add("button-pages")
+buttonBack.style.backgroundImage =  "url(/imagenes/pikachu-boton-prev.jpg)";
+buttonBack.style.backgroundSize = "cover";
+buttonBack.style.backgroundPosition = "center";
 buttonBack.id="back"
 buttonBack.innerText="BACK"
 
+/*
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ */
+
+
 const buttonNext = document.createElement("div")
 buttonNext.classList.add("button-pages")
+buttonNext.style.backgroundImage = "url(imagenes/charizard-boton-next.jpg)"
+buttonNext.style.backgroundSize = "cover";
+buttonNext.style.backgroundPosition = "center";
 buttonNext.innerText="NEXT"
 buttonNext.id="next"
 

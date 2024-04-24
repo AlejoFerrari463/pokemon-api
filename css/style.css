@@ -1,10 +1,22 @@
 /* HEADER - INICIO */
+body {
+  background-image: url("../imagenes/fondo.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-position: center;
+}
+
 .navbar {
-  background-color: red;
+  background-color: #152FBB;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
+}
+
+.buscar:focus {
+  outline: none;
 }
 
 .images-pages {
@@ -32,8 +44,9 @@
 /* HEADER - FIN */
 /* CARDS - INICIO */
 .card {
-  border: 3px solid green;
-  background-color: yellow;
+  border: none;
+  background-color: #F6EB22;
+  box-shadow: 2px 2px 5px #FB993E, -2px -2px 5px #FB993E;
 }
 
 .contenedor-imagenes {
@@ -85,13 +98,13 @@
 .button-pages {
   height: 40px;
   width: 80px;
-  background-color: brown;
   cursor: pointer;
   margin: 0 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
+  font-weight: bold;
   border: none;
   border-radius: 3px;
 }

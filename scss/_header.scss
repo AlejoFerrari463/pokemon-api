@@ -1,8 +1,17 @@
 /* HEADER - INICIO */
 
+body {
+
+    background-image: url("../imagenes/fondo.png");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:auto;
+    background-position: center;
+}
+
 .navbar{
 
-    background-color: red;
+    background-color: $color-fondo;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -10,7 +19,12 @@
     
 }
 
+.buscar:focus {
 
+    outline: none;
+
+
+}
 
 .images-pages {
 
