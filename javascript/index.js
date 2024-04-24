@@ -46,12 +46,7 @@ agarrarButtonNext.addEventListener("click",()=>{
 
 
 
-// let pokemonBuscado = {
-//     nombre: "",
-//     altura: "",
-//     imagen: "",
-//     peso: "",
-// }
+
 
 
 const buscadorNumero = document.querySelector("input")

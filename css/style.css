@@ -103,5 +103,21 @@
 }
 
 /* MODAl - FIN */
+.mostrar-contenedor {
+  position: relative;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 400px;
+  height: 800px;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  justify-content: center;
+  grid-gap: -100px;
+}
 
 /*# sourceMappingURL=style.css.map */
