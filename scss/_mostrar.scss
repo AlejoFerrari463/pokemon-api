@@ -1,22 +1,48 @@
 .mostrar-contenedor {
 
+
+    padding-top: 20px;
+   
+
     position: relative;
 
-    top: 0px;
+    top: 70px;
     bottom: 0;
     right: 0;
     left: 0;
 
     margin: auto;
 
-    width: 400px;
-    height: 800px;
-    background-color: red;
+    width: 450px;
+    height: 620px;
+  
 
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    justify-content: center;
-    grid-gap: -100px;
+    text-align: center;
+
+
+}
+
+
+.mostrar-id {
+
+    position: absolute;
+
+    top: 0px;
+    right: 6px;
+
+    color: $color-fondo;
+
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+.mostrar-habilidades {
+
+    display: flex;
+
+    justify-content: space-around;
+
 
 }

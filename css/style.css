@@ -55,7 +55,7 @@ body {
 }
 
 .card-img-top {
-  height: 250px;
+  height: 300px;
   object-fit: contain;
 }
 
@@ -70,7 +70,7 @@ body {
 
 .titulo-habilidades {
   margin-top: 30px;
-  color: blue;
+  color: #152FBB;
 }
 
 .contenedor-habilidades {
@@ -79,8 +79,12 @@ body {
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  margin-top: -20px;
+  margin-top: -30px;
   color: black;
+  font-family: "Lugrasimo";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
 
 /* CARDS - FIN */
@@ -117,20 +121,30 @@ body {
 
 /* MODAl - FIN */
 .mostrar-contenedor {
+  padding-top: 20px;
   position: relative;
-  top: 0px;
+  top: 70px;
   bottom: 0;
   right: 0;
   left: 0;
   margin: auto;
-  width: 400px;
-  height: 800px;
-  background-color: red;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  justify-content: center;
-  grid-gap: -100px;
+  width: 450px;
+  height: 620px;
+  text-align: center;
+}
+
+.mostrar-id {
+  position: absolute;
+  top: 0px;
+  right: 6px;
+  color: #152FBB;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mostrar-habilidades {
+  display: flex;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */
