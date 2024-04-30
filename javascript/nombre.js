@@ -30,10 +30,6 @@ mostrarContenedor.innerHTML=`
 
     
 
-    
-
-    
-
 
 
 `
@@ -62,3 +58,13 @@ habilidades.forEach((element) => {
 mostrarContenedor.appendChild(mostrarHabilidades)
 
 main.appendChild(mostrarContenedor);
+
+
+
+const volver = document.querySelector("#volver")
+volver.addEventListener("click",()=>{
+
+    window.location.href = "../index.html"
+
+
+})

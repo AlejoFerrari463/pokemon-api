@@ -164,7 +164,7 @@ fetch(api)
 
                     imagen_adelante.addEventListener("click",()=>{
                         const tituloModal = document.querySelector(".modal-title")
-                        tituloModal.innerText=`${name}`
+                        tituloModal.innerText=`${name.toUpperCase()}`
     
                         const imagenModal = document.querySelector(".modal-body")
                         imagenModal.innerHTML=`
