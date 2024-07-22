@@ -1,4 +1,4 @@
-import * as cargar from '/javascript/cargarPagina.js'
+import * as cargar from './cargarPagina.js'
 
 const contenedorButtons = document.querySelector(".contenedor-botones")
 
