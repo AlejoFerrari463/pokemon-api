@@ -133,7 +133,7 @@ buscadorNumero.addEventListener("keydown",(event)=>{
         localStorage.setItem("habilidades",JSON.stringify(pokemonHabilidades));
        
 
-        window.location.href = "./html/nombgsdfgdfgre.html"
+        window.location.href = "html/nombre.html"
 
     })
     .catch((error)=>{
